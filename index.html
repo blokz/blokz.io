@@ -1,161 +1,614 @@
-<!doctype html>
-<!--
-sn0n.com things
--->
-<html lang="en">
-  <head>
-     <title>blokz.io</title>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> 
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-  		
-<!-- Uses a transparent header that draws on top of the layout's background -->
+<html>
+<head>
 <style>
-.demo-layout-transparent {
-  background: url('./background.jpg') center / cover;
+
+/*************************************
+ * TITLE: Sinorca Screen Stylesheet  *
+ * URI  : sinorca/sinorca-screen.css *
+ * MODIF: 2003-Apr-30 19:31 +0800    *
+ *************************************/
+
+
+/* ##### Common Styles ##### */
+
+body {
+  color: black;
+  background-color: rgb(240,240,240);
+  font-size: 71%;  /* Enables font size scaling in MSIE */
+  margin: 0;
+  padding: 0;
 }
-.demo-layout-transparent .mdl-layout__header,
-.demo-layout-transparent .mdl-layout__drawer-button {
-  /* This background is dark, so we set text to white. Use 87% black instead if
-     your background is light. */
+
+html > body {
+  font-size: 8.5pt;
+}
+
+acronym, .titleTip {
+  border-bottom: 1px dotted rgb(153,153,153);
+  cursor: help;
+  margin: 0;
+  padding: 0 0 0.4px 0;
+}
+
+.doNotDisplay {
+  display: none;
+}
+
+.smallCaps {
+  font-size: 110%;
+  font-variant: small-caps;
+}
+
+
+/* ##### Header ##### */
+
+.superHeader {
   color: white;
+  background-color: rgb(100,135,220);
+  height: 2em;
 }
-</style>
 
-
-
-<!-- Simple header with scrollable tabs. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">blokz - a blockchain group</span>
-    </div>
-    <!-- Tabs -->
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
-      <a href="#scroll-tab-2" class="mdl-layout__tab">Brainstorm</a>
-      <a href="#scroll-tab-3" class="mdl-layout__tab">Resources</a>
-      <a href="#scroll-tab-4" class="mdl-layout__tab">About</a>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">LOGIN</span>
-  </div>
-  <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-      <div class="page-content">
-<!--                                                                                                                                                  -->      
-
-       <!-- Wide card with share menu button -->
-<style>
-.demo-card-wide.mdl-card {
-  width: 85%;
-  margin: 10px;
+.superHeader a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 91%;
+  margin: 0;
+  padding: 0 0.5ex 0 0.25ex;
 }
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('./background.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-		Just getting the site setup, please excuse the mess,....
-		
-				<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currency="steem" data-base="USD" data-secondary="" data-ticker="true" data-rank="false" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>
-		
-		<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD" data-secondary="" data-ticker="true" data-rank="false" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>
-		
 
-		
+.superHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader .left {
+  position: absolute;
+  left: 1.5mm;
+  top: 0.75ex;
+}
+
+.superHeader .right {
+  position: absolute;
+  right: 1.5mm;
+  top: 0.75ex;
+}
+
+.midHeader {
+  color: rgb(39,78,144);
+  background-color: rgb(140,170,230);
+}
+
+.headerTitle {
+  font-size: 337%;
+  font-weight: normal;
+  margin: 0 0 0 4mm;
+  padding: 0.25ex 0;
+}
+
+.subHeader {
+  color: white;
+  background-color: rgb(0,51,153);
+  margin: 0;
+  padding: 1ex 1ex 1ex 1.5mm;
+}
+
+.subHeader a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0.75ex 0 0.5ex;
+}  
+
+.subHeader a:hover {
+  text-decoration: underline;
+}
+
+.superHeader .highlight, .subHeader .highlight {
+  color: rgb(253,160,91);
+  background-color: transparent;
+}
+
+
+/* ##### Side Bar ##### */
+
+#side-bar {
+  width: 15em;
+  float: left;
+  clear: left;
+  border-right: 1px solid rgb(153,153,153);
+}
+
+#side-bar div {
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+.sideBarTitle {
+  font-weight: bold;
+  margin: 0 0 0.5em 2.5mm;
+  padding: 1em 0 0 0;
+}
+
+#side-bar ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0 0 1.1em 0;
+}
+
+#side-bar li {
+  margin: 0;
+  padding: 0.1ex 0;  /* Circumvents a rendering bug (?) in MSIE 6.0 */
+}
+
+#side-bar a, .thisPage {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: none;
+  margin: 0;
+  padding: 0.75em 1ex 0.75em 5mm;
+  display: block;
+}
+
+.thisPage {
+  color: black;
+  background-color: white;
+  padding-left: 4mm;
+  border-top: 1px solid rgb(153,153,153);
+  border-bottom: 1px solid rgb(153,153,153);
+}
+
+#side-bar a:hover {
+  color: white;
+  background-color: rgb(100,135,220);
+  text-decoration: none;
+}
+
+.sideBarText {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0 1.5ex 0 2.5mm;
+  display: block;
+}
+
+#side-bar .sideBarText a {
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#side-bar .sideBarText a:hover {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.lighterBackground {
+  color: inherit;
+  background-color: white;
+}
+
+
+/* ##### Main Copy ##### */
+
+#main-copy {
+  background-color: white;
+  text-align: justify;
+  line-height: 1.5em;
+  margin: 0 0 0 15em;
+  padding: 0.5mm 5mm 5mm 5mm;
+  border-left: 1px solid rgb(153,153,153);
+}
+
+#main-copy p {
+  margin: 1em 1ex 2em 1ex;
+  padding: 0;
+}
+
+#main-copy a {
+  color: rgb(0,102,204);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#main-copy a:hover {
+  text-decoration: none;
+}
+
+
+
+#main-copy .topOfPage {
+  background-color: transparent;
+  font-size: 91%;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 2.5ex 1ex 0 0;  /* For MSIE */
+  padding: 0;
+  float: right;
+}
+
+#main-copy > .topOfPage {
+  margin: 2.75ex 1ex 0 0;  /* For fully standards-compliant user agents */
+}
+
+dl {
+  margin: 1em 1ex 2em 1ex;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+dd {
+  margin: 0 0 2em 2em;
+  padding: 0;
+}
+
+
+/* ##### Footer ##### */
+
+#footer {
+  color: white;
+  background-color: rgb(100,135,220);
+  font-size: 91%;
+  margin: 0;
+  padding: 1em 2.5mm 2.5ex 2.5mm;
+  clear: both;
+}
+
+#footer .left {
+  line-height: 1.45em;
+  float: left;
+  clear: left;
+}
+
+#footer .right {
+  text-align: right;
+  line-height: 1.45em;
+}
+
+#footer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
+
+.demo-card-square.mdl-card {
+  width: 100%;
+  margin-top:15px;
+  margin-bottom: 15px;
+}
+
+.mdl-card__title {
+ background: rgb(100,135,220);
+}
+
+.icons {
+    font-size: 24px;
+    padding: 7px;
+}
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<title>blokz.io</title>
+</head>
+<body>
+
+<!-- ##### Header ##### -->
+<div id="header">
+<div class="superHeader mdl-card__title">
+
+<div class="right ">
+<a href="https://facebook.com/robert.z.foraker" target="_new"><i class="icon-social-facebook icons"></i></a>
+<a href="https://www.linkedin.com/in/rforaker/" target="_new"><i class="icon-social-linkedin icons"></i></a>
+<a href="https://twitter.com/sn0n" target="_new"><i class="icon-social-twitter icons"></i></a>
+<a href="https://www.instagram.com/sn0n/" target="_new"><i class="icon-social-instagram icons"></i></a>
+<a href="https://github.com/sn0n" target="_new"><i class="icon-social-github icons"></i></a>
+</div>
+</div>
+<div class="midHeader">
+<h1 class="headerTitle">blokz.io</h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ##### Side Bar ##### -->
+<div id="side-bar">
+<div class="lighterBackground">
+<p class="sideBarTitle">Knowledge</p>
+<span class="sideBarText">
+<a href="https://steemit.com/created/driveideas2creation" target="_new">#DriveIdeas2Creation</a>
+
+</span>
+</div>
+<div>
+<p class="sideBarTitle">Open Source</p>
+<span class="sideBarText">
+This website (<a href="http://haran.freeshell.org/oswd/sinorca/" target="_new">template</a>) and its philosophy are based on open source values. 
+All software is <a href="http://copyfree.org/">Copyfree</a> and <a href="https://github.com/sn0n">Open Source</a> <br />
+<a href="https://opensource.org" target="_new">ref 1,</a> 
+<a href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html" target="_new">ref 2,</a> <br />
+Social Media Icons: <br /><a href="https://github.com/thesabbir/simple-line-icons" target="_new">here</a>
+</span>
+</div>
+</div>
+
+
+
+
+
+<!-- ##### Main Copy ##### -->
+<div id="main-copy">
+
+
+
+
+<!-- tabs start here -->
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+      <div class="mdl-tabs__tab-bar">
+<a href="#landing" class="mdl-tabs__tab is-active mdl-navigation__link">Home</a>
+<a href="#blokz-panel" class="mdl-tabs__tab mdl-navigation__link">Blokz</a>
+<a href="#resources-panel"class="mdl-tabs__tab mdl-navigation__link">Resources</a>
+<a href="#about-panel" class="mdl-tabs__tab mdl-navigation__link">About</a>
+</div>
+  <div class="mdl-tabs__panel is-active" id="landing">
+
+<!-- START LANDING PANEL -->
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="cms">The Art of Success: Learning</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
+Contruction? what construction? This website is finished!! Ok, for sure not finished! this is more a early draft of what won't really even be here, more just a place holder for my thoughts for now, while I organize them a bit.. github will have a full history. LoL <br />
+    <pre>
+      NOTES ONLY FOR NOW!!! THIS IS A WORK IN PROGRESS!!!
+
+      -------------------------------------
+      7 habits -
+      -------------------------------------
+      1. Be a Step Ahead
+      2. Begin with the End in Mind
+      3. Put First Things First
+          A) Important and Urgent
+          B) Important and not Urgent
+          C) Not Important and Urgent
+          D) Not Important and not Urgent
+      4. Think Win-Win
+      5. Seek First to Understand, Then to be Understood
+      6. Synergize
+      7. Refine
+      
+      -------------------------------------
+      GTD - 
+      -------------------------------------
+      GOALS ----
+      Monthly-Horizon 5: Life
+      Monthly-Horizon 4: Long-term visions
+      Monthly-Horizon 3: 1-2 year goals
+      Weekly-Horizon 2: Areas of focus and accountability
+      Daily-Horizon 1: Current projects
+      Daily-Ground: Current actions
+      
+      Process tasks/todos/goals 
+          (Current Perspective) // 
+              (WORK or PLAY // Self or Anon)
+      capture/collect (box) (daily)
+      clarify/process (smaller boxes) (tasks)
+      organize (sort box contents) (tags)
+      reflect/plan (Task, Tag, When)
+      engage/do ..
+      
+      -----------------------------------------------------------------
+      
+      A draft to the Strangest Secret
+      
+      1. Moral Influence
+      2. Weather
+      3. Terrain
+      4. Commander
+      5. Doctrine
+      to assess the outcome, compare various conditions in terms of these 5 constant factors
+      
+      What side has more moral influence?
+      What side is more capable?
+      Which side holds more favor in weather and terrain?
+      On which side are decrees better implemented?
+      Which side is superior in arms?
+      Which side is better trained?
+      Which side is stricter and more impartial in strict reward and punishment?
+      
+      
+      Create a helpful situation.
+      All warfare is based on deception, appear what we arent.
+      Bait and Flip Attitude.
+      Be Random.
+      Keys to Victory!!!
+      
+      51% is a Victory!!
+      
+      Time is Money, FRIEND!
+      Everyone wins, but Reward the Champion first.
+      
+      Be Kind, first to the opposition.
+      
+      Win without Fighting. 
+      Attack Oposing strategies.
+      Disrupt with Diplomacy.
+      Attack Directly or Walk Away.
+      
+      
+      Surround, Engage, Divide, Elude & Defend. 
+      
+      Know the Strengths and Weaknesses, Paper - Rock - Scissor // Fire - Water - Wind
+      
+      Negative Factors - Impossible Tasks. Knowing Relationships. Knowing Skills.
+      
+      When to Engage? Big and Small Tool Knowledge? United in cause? Prepared in wait? Free?
+      
+      Knowledge!!!
+      
+      
+
+    </pre>
+  
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a href="http://steemit.com/@blokz" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Read more on our steemit blog
-    </a>
+</div>
+<!-- END LANDING PANEL -->
+
   </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
+  <div class="mdl-tabs__panel" id="blokz-panel">
+
+
+<!-- START BLOKZ PANEL -->
+
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="cms">CMS - SSG</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
+Blokz-CMS is a VS VB (Very Simple, Very Basic) NodeJS Static Site Generator. The basic premise will be to use this for generating a 'landing' or 'profile' style websites. (Coming Soon in 2018!)
   </div>
 </div>
 
 
-      
-       <!-- Wide card with share menu button 
-<div class="demo-card-wide mdl-card mdl-card-expand mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="todo">ToDo</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
+blokz todo is a public todo list app with social integration and rewards! (Coming Soon).<br />
+I've always struggled with todo lists personally, they've never been a good fit, something is always off about the presentation or interface... <br />
+So after much research,.. did you know public todo lists were even a thing?? I've decided to promote public todos in a app form, using steem.. this has many amazing benefits.. <br />
+<ul>
+  <li>More organized</li>
+  <li>Monitize your todo items! People upvoting your (high quality, 30+ minute worthy of discussion todo items...) items and discussing them, helping motivate you.</li>
+  <li>Things and Such</li>
+</ul>
+items taking less then 30 minutes still have a place on a todo list.. but a more centralized weekly updated list.. <br />
+things less than 5 minutes, just stop being a lazy bum and do it now. k thnx. Start with making your bed. 
   </div>
-  <div class="mdl-card__supporting-text">
-    THISISMYSAMPLECARD
+</div>
+
+
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="sec">Security</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
+Password best practices... by <a href="https://www.facebook.com/robert.z.foraker/posts/10154938463046260">me</a>:<br />
+Take security seriously.. does your bios have a password? Your computer pre-boot? How about an encrypted hard drive? Automatic login is off correct? And password protected? And don't forget to use all different passwords. While at it make sure your router is password protected. Change default passwords. And your bank has a different password from your email,.. which doesn't share passwords with social media sites... 
+While you go through this process.. setup automatic updates.. and do a full software update... You don't have to do it all at once.. but follow down through this post and protect yourself...
+
+Don't be a fuckboi slinging your dick around and throwing it in every dirty skant trying to collect STDs like Pokemon.. your money is online these days... Keep it safe. 
+<br />
+With that said.. Password management couldn't be easier with <a href="https://chriszarate.github.io/supergenpass/">SuperGenPass</a> 
+(&amp; <a href="https://play.google.com/store/apps/details?id=info.staticfree.SuperGenPass">Android Version</a>).
+<br /><center><img src="http://via.placeholder.com/600x960"></center> 
+</div>
+</div>
+
+<!-- END BLOKZ PANEL -->
+
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
-  </div>
-</div> -->
+  <div class="mdl-tabs__panel" id="resources-panel">
+<!-- START RESOURCES PANEL -->
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="sec">Infos</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
 
-
-
-<!--                                                                                                                                                  -->
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-      <div class="page-content"></div>
-<!-- Brainstoming -->
-1. Tutorials <br />
-Everything from Personal Care (health, fitness, finance) to Web (Setting up a blog similar to this) to Running a business (Using a version of blokz) <br />
-2. Life Management  (Personal and Business) <br />
-3. Tools - Password Generator and Management<br />
-4. BYOB - Be your own bank <br />
-5. Storefront <br />
-
-
-
-
-
-
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-      <div class="page-content" style="padding: 10px">
        <a href="https://cryptopanic.com" target="new">CryptoPanic</a> ~ Crypto news and updates aggregate<br />
        <a href="https://coinmarketcap.com/all/views/all/" target="new">Coin Market Cap</a> ~ List of crypto altcoins w/prices and data<br />
-       <a href="https://getmdl.io/components/index.html#layout-section" target="new">Material Design Lite</a> ~ Template engine used for this site
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-      <div class="page-content">
-<!-- About -->
+       <a href="https://getmdl.io/components/index.html#layout-section" target="new">Material Design Lite</a> ~ Template engine used for portions of this site<hr />
+       Git:<br />
+       <a href="https://try.github.io/levels/1/challenges/1">https://try.github.io/levels/1/challenges/1</a>
+       <br />
+       Javascript:<br />
+       <a href="http://jsforcats.com">http://jsforcats.com</a> &amp;&amp; <br />
+       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction</a>
+       <br />
+       Node: <br />
+       <a href="https://github.com/maxogden/art-of-node">https://github.com/maxogden/art-of-node</a>
+       
+<br />Extras:<br />
+<a href="https://medium.com/douglas-matoso-english/build-static-site-generator-nodejs-8969ebe34b22">https://medium.com/douglas-matoso-english/build-static-site-generator-nodejs-8969ebe34b22</a><br />
+<a href="https://hackernoon.com/building-a-simple-static-page-generator-with-node-js-4f58f680c47d">https://hackernoon.com/building-a-simple-static-page-generator-with-node-js-4f58f680c47d</a><br />
 
-blokz is an internet company that builds ideas to creation for the better of others, providing tools and resources along the way to help others in their quests.
+<a href="https://schier.co/blog/2014/12/02/the-perfect-static-website-generator-is-the-one-you-write-yourself.html
+">https://schier.co/blog/2014/12/02/the-perfect-static-website-generator-is-the-one-you-write-yourself.html
+</a><br />
 
-<-- /about -->
+<a href="https://developer.ibm.com/node/2017/01/05/lets-code-it-static-site-generator/">https://developer.ibm.com/node/2017/01/05/lets-code-it-static-site-generator/</a>
+<br />
+
+<a href="http://adrianmejia.com/blog/2016/08/12/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/">http://adrianmejia.com/blog/2016/08/12/Getting-started-with-Node-js-modules-require-exports-imports-npm-and-beyond/</a> <br />
+
+<a href="http://geokoder.com/basic-nodejs-example-with-multiple-files">http://geokoder.com/basic-nodejs-example-with-multiple-files</a><br />
+
+<a href="https://github.com/steemit/steem-js">https://github.com/steemit/steem-js</a><br />
+<a href="https://libp2p.io/implementations/">https://libp2p.io/implementations/</a>
+<br /><center><img src="http://via.placeholder.com/600x960"></center>
+
+  </div>
 </div>
-    </section>
-  </main>
+
+<!-- END RESOURCES PANEL -->
+  </div>
+  <div class="mdl-tabs__panel" id="about-panel">
+<!-- START ABOUT PANEL -->
+
+<!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title"><h2 class="mdl-card__title-text" id="todo">Bio and Introductions</h2></div>
+  <div class="mdl-card__actions mdl-card--border ">
+Hi! I'm Rob!<br />
+<center>t(-_-), <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~ Fa Q</center><br />
+I like playing with words, pictures, things &amp; such.<br /> Life is my playground. <br />
+I've been a nerd geek dork since before it was cool, and I tell ya, kids have it easy these days. Original Hipster, mainly because my parents could afford or refused to buy me new clothes. <br />
+I was born in 1980, a time between times, Not a Gen-Xer, Nor a Millenial or part of Gen-Y really... a Xennial or something, I think that's what they are calling us these days. <br />
+Started playing with computers arund 1990, before that I was taking apart every electronic thing I could get my hands on, playing NES, or dorking around playing chess with various family members. Once I discovered computers it was pretty much a wrap on social life... <br />
+Then in 1993 Magic: The Gathering came around,... more words later.. I'm tired. ^>^ <br />
+<br /><center><img src="http://via.placeholder.com/600x960"></center>
+
+  </div>
 </div>
 
 
-  
-  </body>
-</html>
-  
+<!-- END ABOUT PANEL -->
+
+  </div>
+</div>
+<!-- tabs end here -->
+
+</div>
+
+<!-- ##### Footer ##### -->
+<div id="footer">
+<div class="left">
+<a href="https://facebook.com/robert.z.foraker" target="_new">Contact Info</a><br />
+for Consultation & Freelance Availability
+</div>
+
+<div class="right">
+This website is <a href="http://copyfree.org/" target="_new">Copyfree</a><br />
+t(-_-), ~Fa Q<br/>
+Words & Pictures, <a href="https://github.com/sn0n" title="github" target="_new">Things</a> and Such.<br />
+This is Life. It's just a game, have fun. 
+</div>
+</div>
+</body>
