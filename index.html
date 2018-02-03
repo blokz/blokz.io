@@ -44,13 +44,14 @@
 <span class="sideBarText">
     blokz-gen : <a href="/blokz-gen.html">blokz-gen</a><br />
     Steem Tools : <a href="/steem.html">Steem</a><br />
-    
+    Steem Friends : <a href="https://steemit.com/friends/@sn0n/a-list" target="_new">A-List</a>
 </span>
 
 <hr />
 
             <p class="sideBarTitle">Knowledge</p>
             <span class="sideBarText">
+            
             <a href="https://steemit.com/created/driveideas2creation" target="_new">#DriveIdeas2Creation</a>
             
             </span>
@@ -62,7 +63,10 @@
             All software is <a href="http://copyfree.org/">Copyfree</a> and <a href="https://github.com/sn0n">Open Source</a> <br />
             <a href="https://opensource.org" target="_new">ref 1,</a> 
             <a href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html" target="_new">ref 2,</a> <br />
-            Social Media Icons: <br /><a href="https://github.com/thesabbir/simple-line-icons" target="_new">here</a>
+            Social Media Icons: <br /><a href="https://github.com/thesabbir/simple-line-icons" target="_new">here</a><br />
+            Discord group: <a href="https://discord.gg/CgE3Sgr">https://discord.gg/CgE3Sgr</a><br />
+<hr />
+            Words &amp; Pictures,<br /><center>Things &amp; Such.</center><br />
             </span>
             
 
@@ -322,23 +326,63 @@ Then in 1993 Magic: The Gathering came around,... more words later.. I'm tired. 
 </div>
 <!-- tabs end here -->
 
-</div>
 
 
 
-  <!-- ##### Footer ##### -->
+  </div>
+<!-- ##### Footer ##### -->
 <div id="footer">
     <div class="left">
-    <a href="https://facebook.com/robert.z.foraker" target="_new">Contact Info</a><br />
+    <a href="./contact.html" target="_new">Contact Info</a><br />
     for Consultation &amp; Freelance Availability
     </div>
     
     <div class="right">
     This website is <a href="http://copyfree.org/" target="_new">Copyfree</a><br />
     t(-_-), ~Fa Q<br/>
-    Words &amp; Pictures, <a href="https://github.com/sn0n" title="github" target="_new">Things</a> and Such.<br />
+    
     This is Life. It's just a game, have fun. 
     </div>
+
+<!-- SIGNATURE -->
+<strong>
+  <pre><center>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  http://blokz.io is an informational website only.
+   Words, Pictures, Things & Such 
+   found here should be treated as 
+   entertainment and food for thought, 
+   I am NOT responsible for any decisions 
+   made by you or anyone else, your actions are your own. 
+   With that said, these funds are for personal use, 
+   life and such, or new things (read:tech toys) for social media
+   and entertainment, setting up and running servers, or otherwise 
+   working on blokz and life goals. And donations are always welcome,
+   as they say in the open source world, I'd love a beer! 
+  
+  Robert Foraker (@sn0n, aka Shahn Ip)
+</center></pre></strong>
+<!-- signature -->
+
     </div>
+
+
+
+
+    <script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+<script src="https://mktcode.github.io/steemit-widgets/assets/js/steemit-widgets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script>
+  steemitWidgets.blog({
+    element: 'steemit-widgets-blog',
+    user: 'sn0n',
+    limit: 10,
+    template: '<div style="border: 1px solid rgb(0, 0, 0); border-radius: 1px; font-family: Arial, Helvetica, sans-serif; margin-bottom: 15px;"><!----> <h2 style="margin: 0px; font-size: 16px; text-align: left; line-height: 16px; padding: 7px 10px;"><span>${RESTEEMED}</span> <a href="${URL}" style="color: rgb(68, 68, 68); text-decoration: none;">                        ${TITLE}                    </a></h2> <div style="font-size: 12px; color: rgb(136, 136, 136); padding: 0px 10px 5px; background: rgb(255, 255, 255); text-align: left;"><span>${DATE}</span> <span>by <a href="https://steemit.com/@${AUTHOR}" style="color: rgb(68, 68, 68); text-decoration: none;">${AUTHOR}</a></span> <!----> <span>in <a href="https://steemit.com/@${AUTHOR}" style="color: rgb(68, 68, 68); text-decoration: none;">${CATEGORY}</a></span></div> <!----></div>',
+    resteemedIndicator: '<span style="width: 15px; height: 15px; display: inline-block;"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M448,192l-128,96v-64H128v128h248c4.4,0,8,3.6,8,8v48c0,4.4-3.6,8-8,8H72c-4.4,0-8-3.6-8-8V168c0-4.4,3.6-8,8-8h248V96 L448,192z"></path></svg></span>',
+    reputationPrecision: 1,
+    updateInterval: 60,
+    dateCallback: function (date) {return moment.utc(date).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'));}
+  });
+</script>
 </body>
 </html>
