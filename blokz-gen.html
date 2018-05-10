@@ -117,9 +117,45 @@
             level, with a desktop UI for admin tasks. (Forked from
             <a href="https://medium.com/douglas-matoso-english/build-static-site-generator-nodejs-8969ebe34b22">Build a static site generator in 40 lines with Node.js</a> By: Douglas Matoso).
 
+            <h3>Instructions Manual (ish)</h3>
+            <p>
+                Editing the '/partials/sidebar.ejs' file. Social media icons should be edited in a section labeled ##### EDIT BELOW #####. Linking to other pages within the site will be done by editing the second EDIT BELOW instance as links to other pages in the '/pages' folder (to be updated for easier use). This process should be rather obvious, if not, please email using contact page in menu to provide feedback.
+            </p>
+            <p>
+                'site.config.js' needs light editing, namely updating the steem user, but also title and description.             
+            </p>
+            <p>
+                Footer can be edited in 'footer.ejs' in the '/partials' folder.
+            </p>
+            <p>
+                Cards are edited in 2 places, '/pages/index.ejs' file and the '/partials/cards' folder. Editing index.ejs is a bit more elaborate then the other edits, but after getting a feel for the previous edits should be easy enough. As for the contents of each tab, thats the files in the 'cards' folder.
+            </p>
+            <p>
+                That's all for now folks. Edit away!!!
+            </p>
+    <h3>commands of power</h3>
+    <pre>
+        Inside the '/blokz-gen/' folder use the following commands to use blokz gen 
+        (build builds the site, 
+        serve lets you test it locally before uploading the 'public' folder to a webhost)   
+    
+            $ npm i
+            $ npm run build
+            $ npm run serve
+            ```
+            
+            Go to http://localhost:5000 to see the generated site.
+            
+            Once built, the '/public/' folder will have your generated static site, 
+            enjoy uploading it to any webserver. 
+    </pre>
+
         </p>
     </div>
 </div>
+
+
+
 
       </div>
 <!-- ##### Footer ##### -->
