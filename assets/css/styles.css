@@ -281,6 +281,7 @@ dd {
 
 .demo-card-square.mdl-card {
   width: 100%;
+  margin:auto;
   margin-top:15px;
   margin-bottom: 15px;
 }
