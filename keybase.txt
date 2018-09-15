@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sn0n
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://blokz.io
+  * I am sn0n (https://keybase.io/sn0n) on keybase.
+  * I have a public key ASAD-avjdG7rzyC9uwTX6rrjw-Lzjpx7349XTnPj8ZvRKAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012003f9abe3746eebcf20bdbb04d7eabae3c3e2f38e9c7bdf8f574e73e3f19bd1280a",
+      "host": "keybase.io",
+      "kid": "012003f9abe3746eebcf20bdbb04d7eabae3c3e2f38e9c7bdf8f574e73e3f19bd1280a",
+      "uid": "fffa893245a9cf3d369689bb49987d19",
+      "username": "sn0n"
+    },
+    "merkle_root": {
+      "ctime": 1536978789,
+      "hash": "0f0afac4e7fc98c048c29936a24259faf55cdc935124f184bb65dae909c5bff497967cabb2502cfdce7fe061d30289c037478e681bc664ec0022e6299800b391",
+      "hash_meta": "05ad246f254580eef840d8d1f7569d38ffad5cd3154866ef8377d04969304246",
+      "seqno": 3612828
+    },
+    "service": {
+      "entropy": "CQwzbP704o/dT1/STflSaSXT",
+      "hostname": "blokz.io",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.6.0"
+  },
+  "ctime": 1536979211,
+  "expire_in": 504576000,
+  "prev": "d4ef00874a668b6d580f4a20e3c40860cc85e47a1e38527e7cfd15884f96c458",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgA/mr43Ru688gvbsE1+q648Pi846ce9+PV05z4/Gb0SgKp3BheWxvYWTESpcCCsQg1O8Ah0pmi21YD0og48QIYMyF5HoeOFJ+fP0ViE+WxFjEIC5xARBMN0EFrFSeK8IGZ+aDQ6r+4KWyyRLIQLFAL3DkAgHCo3NpZ8RAvvyg73jKCVChn1vKcq+0X184C0sPa6KtlKuKsG76A/LZ0fatIccQWNZfIEAaY7H5Gxt3Hkbm4U0L4PrLRrPjDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMbX4ogITWkvdKIythn2revxUIXwmqT1NtSqfGVpWMJNo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sn0n
+
+==================================================================
