@@ -21,7 +21,8 @@ function getQueryVariable(variable) {
 // set steem default user if not set
 if (getQueryVariable("steem") !== false) {
     user = getQueryVariable("steem");
-        document.getElementById("sitelabel").innerHTML = user + "'s steem profile ";
+   // todo: fix this later
+    //     document.getElementById("sitelabel").innerHTML = user + "'s steem profile ";
     console.log(user + " connected");   
 } else {
     // this works. toggle for dev
