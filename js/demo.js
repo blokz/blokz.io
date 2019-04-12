@@ -21,6 +21,7 @@ function getQueryVariable(variable) {
 // set steem default user if not set
 if (getQueryVariable("steem") !== false) {
     user = getQueryVariable("steem");
+        document.getElementById("sitelabel").innerHTML = user + "'s steem profile ";
     console.log(user + " connected");   
 } else {
     // this works. toggle for dev
@@ -39,7 +40,7 @@ window.onload = function loading() {
         // EXECUTE FOR STEEM
         const now = new Date().toISOString().split('.')[0];
         
-        document.getElementById("sitelabel").innerHTML = user + "'s steem profile ";
+
 
         steem.api.getDiscussionsByAuthorBeforeDate(user, 'profile', now, 1, (err, result) => {
 
@@ -120,12 +121,12 @@ window.onload = function loading() {
         console.log('i = ' + (i + 1));
     }
 
-    if (getQueryVariable("id") !== false) {
-        document.getElementById("external").innerHTML = getQueryVariable("id");
+    // if (getQueryVariable("id") !== false) {
+    //    document.getElementById("external").innerHTML = getQueryVariable("id");
         // todo: ID tags
-    } else {
-        document.getElementById("external").innerHTML = "none";
-    }
+  //  } else {
+  //      document.getElementById("external").innerHTML = "none";
+  //  }
    
     //loading end
 };
@@ -178,7 +179,6 @@ db.findOne({ _id: 1 }, function (err, doc) {
         console.log('Updated ' + num + ' records');
     });
 });
-
 
 
 
