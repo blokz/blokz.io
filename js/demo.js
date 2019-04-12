@@ -5,10 +5,10 @@ var playgroun1 = `
     You clicked once, you won't see this again. ^>^
 `;
 // data variable is in demo.json 
-//var mydata = JSON.parse(data);
+// var mydata = JSON.parse(data);
 var year = new Date();
 
-// this checks for url variables like ?id=42&friend=8-bit.
+// this checks for url variables like ?steem=sn0n
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -18,7 +18,16 @@ function getQueryVariable(variable) {
     }
     return (false);
 }
+// set steem default user if not set
+if (getQueryVariable("steem") !== false) {
+    user = getQueryVariable("steem");
+    console.log(user + " connected");   
+} else {
+    // this works. toggle for dev
+    user = "sn0n";
+    console.log(user);
 
+}
 // steem bit
 
 
@@ -26,16 +35,7 @@ function getQueryVariable(variable) {
 window.onload = function loading() {
 
 
-    if (getQueryVariable("steem") !== true) {
-        
-        // this works. toggle for dev
-        user = "sn0n";
-        console.log(user);
-       
-    } else {
-        user = getQueryVariable("steem");
-        console.log(user);
-    }
+
         // EXECUTE FOR STEEM
         const now = new Date().toISOString().split('.')[0];
         
