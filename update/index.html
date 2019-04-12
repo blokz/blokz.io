@@ -94,55 +94,37 @@
     <div id="main-copy"  role=”main”>
         
   
-    <!-- demo -->
-<div class="bio" id="bio">
-    <div id="userpic"><img id="default_pic" class="profile_pic"></div>
-    <span id="name" class="name"></span> - 
-    <small><span id="usertitle" class="UserTitle"></span></small><br />
-    Steemit: <span id="steemagent"></span><br />
-    Age: <span id="age"></span> || Sign:<span id="sign"></span><br />
-    Gender: <span id="gender"></span> <br />
-    Location: <span id="location"></span><br />
-    Hobbies &amp; Skills: <div id="skills" class="skills"></div>
-   
- <span>About Me:</span><div id="biofull" class="biofull"></div>
-<div>Friends: 
- <div id="Friend1"></div>
- <div id="Friend2"></div>
- <div id="Friend3"></div>
- <div id="Friend4"></div>
- <div id="Friend5"></div>
- <div id="Friend6"></div>
- <div id="Friend7"></div>
- <div id="Friend8"></div>
-</div>
-
- <!-- work / goals , hobbies/intersts , sound/videos -->
-</div>
-<!-- demo -->
-
-    <!-- demo file -->
+    <!-- CARD -->
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" id="cms">Steem Posts</h2>
+    </div>
+    <div class="mdl-card__actions mdl-card--border ">
      
-    <div class="external">Load External ID resource: <span id="external"></span> <br />
-      <small>use : <a href="./?id=42">?id=42</a><br />
-    <a href="./?steem=sn0n">?steem=sn0n</a><br />
-    <a href="./?steem=blokz">?steem=blokz</a><br />
-    </small></div>  
-    <!-- demo file -->
+            <div id="steemit-widgets-blog"></div>
 
-      <script>
-            if('serviceWorker' in navigator) {
-              navigator.serviceWorker
-                   .register('sw.js')
-                   .then(function() { console.log("Service Worker Registered"); });
-            }
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-              e.preventDefault();
-              deferredPrompt = e;
-            });
-            </script> 
+            <script src="https://mktcode.github.io/steemit-widgets/assets/js/steemit-widgets.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+            <script>
+              steemitWidgets.blog({
+                element: 'steemit-widgets-blog',
+                user: 'sn0n',
+                limit: 10,
+                template: '<div style="border: 1px dashed rgb(0, 0, 0); border-radius: 1px; font-family: Arial, Helvetica, sans-serif; margin-bottom: 15px;"><!----> <h2 style="margin: 0px; font-size: 16px; text-align: left; line-height: 16px; padding: 7px 10px;"><span>${RESTEEMED}</span> <a href="${URL}" style="color: rgb(68, 68, 68); text-decoration: none;">                        ${TITLE}                    </a></h2> <div style="font-size: 12px; color: rgb(136, 136, 136); padding: 0px 10px 5px; background: rgb(255, 255, 255); text-align: left;"><span>${DATE}</span> <span>by <a href="https://steemit.com/@${AUTHOR}" style="color: rgb(68, 68, 68); text-decoration: none;">${AUTHOR}</a></span> <!----> <span>in <a href="https://steemit.com/@${AUTHOR}" style="color: rgb(68, 68, 68); text-decoration: none;">${CATEGORY}</a></span></div> <!----></div>',
+                resteemedIndicator: '<span style="width: 15px; height: 15px; display: inline-block;"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M448,192l-128,96v-64H128v128h248c4.4,0,8,3.6,8,8v48c0,4.4-3.6,8-8,8H72c-4.4,0-8-3.6-8-8V168c0-4.4,3.6-8,8-8h248V96 L448,192z"></path></svg></span>',
+                reputationPrecision: 1,
+                updateInterval: 60,
+                dateCallback: function (date) {return moment.utc(date).from(moment.utc().format('YYYY-MM-DD HH:mm:ss'));}
+              });
+            </script>
 
+    </div>
+</div>
+
+
+
+
+   
 
       <!-- close body content div-->
 </div>
