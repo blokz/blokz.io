@@ -5,8 +5,30 @@ var playgroun1 = `
     You clicked once, you won't see this again. ^>^
 `;
 // data variable is in demo.json 
-// var mydata = JSON.parse(data);
+//var mydata = JSON.parse(data);
 var year = new Date();
+
+// update profile 
+function updateProfile() {
+    steem.broadcast.comment(
+        document.getElementById('postingKey').value,
+        '', //author
+        'profile', //firsttag
+        document.getElementById('username').value,
+        'profile', //permlink
+        'My Blokz Profile',
+        document.getElementById('article').value,
+        // json meta
+        { tags: ['blokz'], app: 'blokz', friends: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']},
+        function (err, result) {
+            if(err)
+                alert('failure ' + err);
+            else
+                alert('Profile Updated');
+        }
+    );
+}
+
 
 // this checks for url variables like ?steem=sn0n
 function getQueryVariable(variable) {
@@ -180,18 +202,6 @@ db.findOne({ _id: 1 }, function (err, doc) {
         console.log('Updated ' + num + ' records');
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
