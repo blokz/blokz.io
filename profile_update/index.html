@@ -27,31 +27,24 @@
 <link rel="shortcut icon" href="/favicon.png"/>
 <link rel="manifest" href="/manifest.json">
 
+
 </head>
 
 <body>
   
 <!-- ##### Template Header ##### -->
 <div id="header">
-    <div class="superHeader mdl-card__title">
+    <div class="superHeader">
     
-    <div class="right ">
-<!-- ##### social media buttons ##### -->
-    <a href="https://facebook.com/robert.z.foraker" target="_blank"><i class="icon-social-facebook icons"></i></a>
-    <a href="https://www.linkedin.com/in/rforaker/" target="_blank"><i class="icon-social-linkedin icons"></i></a>
-    <a href="https://twitter.com/sn0n" target="_blank"><i class="icon-social-twitter icons"></i></a>
-    <a href="https://www.instagram.com/sn0n/" target="_blank"><i class="icon-social-instagram icons"></i></a>
-    <a href="https://github.com/sn0n" target="_blank"><i class="icon-social-github icons"></i></a>
-<!-- ##### social media buttons ##### -->
-</div>
     </div>
     <!-- menu bar -->
     <div class="midHeader">
     <h1 class="headerTitle">
             <button id="demo-menu-lower-left"
             class="mdl-button mdl-js-button mdl-button--icon">
-            <i class="icon-menu"></i>
-    </button> <a href="../" style="color: white; text-decoration: none" id="sitelabel">
+            <!-- <i class="icon-menu"></i> -->
+            <img src="/images/logo512.png" height="32" width="32">
+    </button> <a href="../../../" style="color: white; text-decoration: none" id="sitelabel">
         blokz.io
     </a></h1>
     
@@ -63,10 +56,14 @@
 
 <!-- ##### EDIT BELOW ##### -->
     <!-- <a href="/projects/index.html">Projects</a> -->
+            <a href="/plan/">Da Plan</a>
+            <a href="/steem/">Steem</a>
             <a href="/update/">Updates</a>
             <a href="/contact/">Contact</a>
             <a href="/about/">About</a>
 <!-- ##### EDIT ABOVE ##### -->                      
+
+
 
             <span class="sideBarTitle">Open Source</span><br />
             <span class="sideBarText">
@@ -74,10 +71,15 @@
             All software is <a href="http://copyfree.org/">Copyfree</a> and <a href="https://github.com/sn0n">Open Source</a> <br />
             <a href="https://opensource.org" target="_blank">ref 1,</a> 
             <a href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html" target="_blank">ref 2,</a> <br />
-            Social Media Icons: <br /><a href="https://github.com/thesabbir/simple-line-icons" target="_blank">here</a><br />
-             
-        
-            </span><!-- phrasing -->
+            Social Media Icons: <br /><a href="https://github.com/thesabbir/simple-line-icons" target="_blank">here</a><hr />
+            
+            
+            </span>
+            
+
+<!-- ##### social media buttons ##### -->
+            
+            <!-- phrasing -->
             <!-- sidebar -->
 
 
@@ -87,26 +89,71 @@
     <!-- end menu bar -->
     </div>
 
+    <div class="superHeader">
+    
+        
+        </div>
+
 <!-- end header -->    
 </div>
     <!-- ##### Main Body Content ##### -->
     <div id="main-copy"  role=”main”>
         
+
   
     <h2>Update profile</h2>
-      <div style="color: red">CURRENTLY DISABLED</div>
-Steem Username: <input id="username" type="text"> <br />
-Posting Key: <input id="postingKey" type="password" size="42">
-<!-- TODO : Steemconnect here --><hr />
-Real Name: <input id="realname" type="text"><br />
-Title: <input id="usertitle" type="text"><br />
-Birth Year: <input id="birthyear" type="text"><br />
-Astro Sign: <input id="sign" type="text"><br />
-Gender: <input id="gender" type="text"><br />
-Skills: <input id="skills" type="text"><br />
-<small>seperate skills (single words) with a comma</small><br />
-Location: <input id="location" type="text"><br />
+<div style="color: red">CURRENTLY DISABLED</div>
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="username">
+    <label class="mdl-textfield__label" for="username">Steem Username</label>
+</div>
+<br />
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="password" id="postingKey">
+    <label class="mdl-textfield__label" for="postingKey">Posting Key</label>
+</div>
+
+<!-- TODO : Steemconnect code --><hr />
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="realame">
+    <label class="mdl-textfield__label" for="realname">Real Name</label>
+</div><br />
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="usertitle">
+    <label class="mdl-textfield__label" for="usertitle">Job/Self Title</label>
+</div><br />
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="birthyear">
+    <label class="mdl-textfield__label" for="birthyear">Birth Year</label>
+</div><br />
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="sign">
+    <label class="mdl-textfield__label" for="sign">Astrology Sign</label>
+</div><br />
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="gender">
+    <label class="mdl-textfield__label" for="gender">Gender</label>
+</div><br />
+
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="skills">
+    <label class="mdl-textfield__label" for="skills">Skills (single word, comma to seperate)</label>
+</div><br />
+
+
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="location">
+    <label class="mdl-textfield__label" for="location">Location</label>
+</div><br />
+
 Friends:<br />
+
 <input id="Friend1" type="text"><br />
 <input id="Friend2" type="text"><br />
 <input id="Friend3" type="text"><br />
@@ -115,10 +162,15 @@ Friends:<br />
 <input id="Friend6" type="text"><br />
 <input id="Friend7" type="text"><br />
 <input id="Friend8" type="text"><br />
-Bio Text: <br />
 
-<textarea id="article"></textarea><br />
-<input id="updateprofile" type="button" value="Update Profile" disabled>
+
+<div class="mdl-textfield mdl-js-textfield">
+    <textarea class="mdl-textfield__input" type="text" rows= "10" id="article" ></textarea>
+    <label class="mdl-textfield__label" for="article">Bio</label>
+</div><br />
+
+<input id="updateprofile" type="button" value="Update Profile" onclick=updateProfile() disabled>
+
       <!-- close body content div-->
 </div>
 

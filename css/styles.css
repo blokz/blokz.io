@@ -68,32 +68,9 @@ acronym, .titleTip {
 .superHeader {
   color: white;
   background-color: rgb(100,135,220);
-  height: 2em;
+  height: 8px;
 }
 
-.superHeader a {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-  margin: 0;
-  padding: 0 0.5ex 0 0.25ex;
-}
-
-.superHeader a:hover {
-  text-decoration: underline;
-}
-
-.superHeader .left {
-  position: absolute;
-  left: 1.5mm;
-  top: 0.75ex;
-}
-
-.superHeader .right {
-  position: absolute;
-  right: 1.5mm;
-  top: 0.75ex;
-}
 
 .midHeader {
   color: rgb(39,78,144);
@@ -101,10 +78,10 @@ acronym, .titleTip {
 }
 
 .headerTitle {
-  font-size: 337%;
+  font-size: 32px;
   font-weight: normal;
   margin: 0 0 0 4mm;
-  padding: 0.25ex 0;
+  padding: 0 0;
 }
 
 .subHeader {
@@ -314,6 +291,7 @@ dd {
 }
 
 .icons {
-    font-size: 24px;
-    padding: 7px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
 }

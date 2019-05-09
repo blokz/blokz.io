@@ -70,6 +70,15 @@ window.onload = function loading() {
             // do steem things
             if (result) {
                 var blokify = JSON.parse((result[0].body));
+                console.log(blokify);
+                // work on metadata
+
+                var blokzmeta = JSON.parse((result[0].json_metadata));
+                console.log(user + " json_metadata: ");
+                console.log(blokzmeta);
+                console.log(blokzmeta.friends);
+
+                // todo : work on metadata
                 document.getElementById("name").innerHTML = blokify[0].name;
                 document.getElementById("usertitle").innerHTML = blokify[0].title;
                 document.getElementById("steemagent").innerHTML = "<a href='http://steemit.com/@"+ user +"' target='_blank'>@" + user + "</a>";
