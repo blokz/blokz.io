@@ -38,8 +38,8 @@ margin-bottom: 0px
 /* ##### Common Styles ##### */
 
 body {
-  color: black;
-  background-color: rgb(240,240,240);
+  color: black;  
+  background-color: rgb(100,135,220);
   margin: 0;
   padding: 0;
 }
@@ -68,7 +68,7 @@ acronym, .titleTip {
 .superHeader {
   color: white;
   background-color: rgb(100,135,220);
-  height: 8px;
+  height: 2px;
 }
 
 

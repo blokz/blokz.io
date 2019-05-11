@@ -8,8 +8,9 @@ self.addEventListener('install', function(e) {
 				'images/favicon.png',
 				'images/logo512.png',
 				'images/logo192.png',
-				'js/demo.js',
-                                'css/styles.css',
+				'js/blokz.js',
+				'js/steem.js',
+				'css/styles.css',
 			]);
 		})
 	);
