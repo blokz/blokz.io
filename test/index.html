@@ -57,7 +57,7 @@
 <!-- ##### EDIT BELOW ##### -->
     <!-- <a href="/projects/index.html">Projects</a> -->
             <a href="/plan/">Da Plan</a>
-            <a href="/steem/">Steem</a>
+            <a href="/profile/">Steem Profile</a>
             <a href="/update/">Updates</a>
             <a href="/contact/">Contact</a>
             <a href="/about/">About</a>
@@ -152,6 +152,30 @@
 <td>Text</td>
 </tr>
 </tbody></table>
+<p>if (blokify[0].skills !== undefined) {
+                    var skills = blokify[0].skills;
+                    skillsLog = skills.split(&#39;,&#39;);
+                    skillsLog.forEach(function (entry) {
+                        console.log(entry);
+                        entryy = entry.replace(/\s+/g, &#39;&#39;);
+                        entryy = entryy.replace(/[^a-zA-Z0-9]/g, &#39;&#39;);
+                        entryy = entryy.toLowerCase();
+                        var a = document.createElement(&#39;a&#39;);
+                        var linkText = document.createTextNode(entry);
+                        a.appendChild(linkText);
+                        a.title = entry;
+                        a.target = &quot;_blank&quot;;
+                        a.href = &quot;<a href="https://steempeak.com/created/&quot;">https://steempeak.com/created/&quot;</a> + entryy;
+                        document.getElementById(&quot;skills&quot;).appendChild(a);
+                    });
+                } else {
+                    console.log(&quot;no skills&quot;)
+                }</p>
+<p>for (var i = 0; i &lt; blokzmeta.users.length; i++) {
+                    console.log(&quot;Friend &quot; + i + &quot; is @&quot; + blokzmeta.users[i])
+                    id = &quot;Friend&quot; + i;
+                    document.getElementById(id).innerHTML = &quot;<a href='http://steempeak.com/@" + blokzmeta.users[i] + "' target='_blank'>@&quot; + blokzmeta.users[i] + &quot;</a>&quot;;
+                }</p>
 
       <!-- close body content div-->
 </div>

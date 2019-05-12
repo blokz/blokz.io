@@ -53,7 +53,7 @@ function updateProfile() {
 
     // build profile data
    
-var data = "A blokz profile, please click <a href='blokz.io/steem/?steem="+ document.getElementById('steemagent').value + "' target='_blank'>blokz.io/steem/?steem="+ document.getElementById('steemagent').value + "</a> to view.";
+var data = "A blokz profile, please click <a href='blokz.io/profile/?steem="+ document.getElementById('steemagent').value + "' target='_blank'>blokz.io/profile/?steem="+ document.getElementById('steemagent').value + "</a> to view.";
 var article = document.getElementById('article').value;
 var name =  document.getElementById('name').value;
 var usertitle = document.getElementById('usertitle').value;
