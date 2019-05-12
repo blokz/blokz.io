@@ -1,15 +1,82 @@
+const now = new Date().toISOString().split('.')[0];
+
 // update profile 
+function steemagentUp() {
+    console.log("TRIGGERED!!!");
+    let steemagent = document.getElementById("steemagent").value;
+    console.log(steemagent);
+    steem.api.getDiscussionsByAuthorBeforeDate(steemagent, 'blokzprofile', now, 1, (err, result) => {
+
+        // populate data
+        if (result) {
+            console.log("results are in:");
+            console.log(result);
+            var blokify = JSON.parse(JSON.stringify(result[0].body));
+            var blokzmeta = JSON.parse((result[0].json_metadata));
+            console.log(blokify);
+            console.log("blokzmeta: " + blokzmeta);
+
+            console.log(blokzmeta.blokz);
+
+            var bitff = JSON.parse(JSON.stringify(blokzmeta));
+
+            console.log(bitff);
+            document.getElementById("name").value = bitff.name;
+            document.getElementById("nameLabel").style.display = "none";
+            document.getElementById("article").value = bitff.article;
+            document.getElementById("articleLabel").style.display = "none";
+            document.getElementById("usertitle").value = bitff.usertitle;
+            document.getElementById("usertitleLabel").style.display = "none";
+            document.getElementById("birthyear").value = bitff.birthyear; 
+            document.getElementById("birthyearLabel").style.display = "none";
+            document.getElementById("sign").value = bitff.sign;
+            document.getElementById("signLabel").style.display = "none";
+            document.getElementById("location").value = bitff.location;
+            document.getElementById("locationLabel").style.display = "none";
+            document.getElementById("gender").value = bitff.gender;
+            document.getElementById("genderLabel").style.display = "none";
+            document.getElementById("interests").value = bitff.interests;
+            document.getElementById("interestsLabel").style.display = "none";
+            document.getElementById("favorites").value = bitff.favorites;
+            document.getElementById("favoritesLabel").style.display = "none";
+
+        } else {
+            reject(err);
+        }
+ //end auto populate code
+
+    });
+   
+}
+
 function updateProfile() {
+
+    // build profile data
+   
+var data = "A blokz profile, please click <a href='blokz.io/steem/?steem="+ document.getElementById('steemagent').value + "' target='_blank'>blokz.io/steem/?steem="+ document.getElementById('steemagent').value + "</a> to view.";
+var article = document.getElementById('article').value;
+var name =  document.getElementById('name').value;
+var usertitle = document.getElementById('usertitle').value;
+var birthyear = document.getElementById('birthyear').value;
+var sign =  document.getElementById('sign').value;
+var gender =  document.getElementById('gender').value;
+var location = document.getElementById('location').value;
+var interests =  document.getElementById('interests').value;
+var favorites =  document.getElementById('favorites').value;
+console.log("proof: " + article + name + usertitle + birthyear + sign + gender + location + interests + favorites);
+
+// profile build finished
+
     steem.broadcast.comment(
         document.getElementById('postingKey').value,
         '', //author
-        'profile', //firsttag
+        'blokzprofile', //firsttag
         document.getElementById('steemagent').value,
-        'profile', //permlink
+        'blokzprofile', //permlink
         'My Blokz Profile',
-        document.getElementById('article').value,
+        data,
         // json meta
-        { tags: ['blokz'], app: 'blokz', friends: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']},
+        { tags: ['blokz'], app: 'blokz', friends: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'], article: article, name: name, usertitle: usertitle, birthyear: birthyear, sign: sign, gender: gender, location: location, interests: interests, favorites: favorites },
         function (err, result) {
             if(err)
                 alert('failure ' + err);
@@ -39,8 +106,8 @@ if (getQueryVariable("steem") !== false) {
     console.log(user + " connected");   
 } else {
     // this works. toggle for dev
-    user = "sn0n";
-    console.log(user);
+    //user = "sn0n";
+    //console.log(user);
 
 }
 // steem bit
@@ -52,38 +119,49 @@ window.onload = function loading() {
 
 
         // EXECUTE FOR STEEM
-        const now = new Date().toISOString().split('.')[0];
         
+        
+if (typeof user !== 'undefined') {
 
+        steem.api.getDiscussionsByAuthorBeforeDate(user, 'blokzprofile', now, 1, (err, result) => {
 
-        steem.api.getDiscussionsByAuthorBeforeDate(user, 'profile', now, 1, (err, result) => {
-
-            // do steem things
+            
             if (result) {
-                var blokify = JSON.parse((result[0].body));
-                console.log(blokify);
-                // work on metadata
-
-                var blokzmeta = JSON.parse((result[0].json_metadata));
-                console.log(user + " json_metadata: ");
-                console.log(blokzmeta);
-                console.log(blokzmeta.users);
-                for (var i = 0; i < blokzmeta.users.length; i++) {
-                    console.log("Friend " + i + " is @" + blokzmeta.users[i])
-                    id = "Friend" + i;
-                    document.getElementById(id).innerHTML = "<a href='http://steempeak.com/@" + blokzmeta.users[i] + "' target='_blank'>@" + blokzmeta.users[i] + "</a>";
-                }
                 
 
-                // todo : work on metadata
-                document.getElementById("name").innerHTML = blokify[0].name;
-                document.getElementById("usertitle").innerHTML = blokify[0].title;
-                document.getElementById("steemagent").innerHTML = "<a href='http://steempeak.com/@"+ user +"' target='_blank'>@" + user + "</a>";
-                var profage = year.getFullYear() - blokify[0].birthyear;
+                //for (var i = 0; i < blokzmeta.users.length; i++) {
+                //    console.log("Friend " + i + " is @" + blokzmeta.users[i])
+                //    id = "Friend" + i;
+                //    document.getElementById(id).innerHTML = "<a href='http://steempeak.com/@" + blokzmeta.users[i] + "' target='_blank'>@" + blokzmeta.users[i] + "</a>";
+               // }
+                
+
+                var blokify = JSON.parse(JSON.stringify(result[0].body));
+                var blokzmeta = JSON.parse((result[0].json_metadata));
+                console.log(blokify);
+                console.log("blokzmeta: " + blokzmeta);
+    
+
+    
+                var bitff = JSON.parse(JSON.stringify(blokzmeta));
+                console.log(bitff.interests);
+                document.getElementById("name").innerHTML = bitff.name;
+                document.getElementById("article").innerHTML = bitff.article;
+                document.getElementById("usertitle").innerHTML = bitff.usertitle;
+                var profage = year.getFullYear() - bitff.birthyear;
                 document.getElementById("age").innerHTML = profage; 
-                document.getElementById("sign").innerHTML = blokify[0].sign;
-                document.getElementById("location").innerHTML = blokify[0].location;
-                document.getElementById("gender").innerHTML = blokify[0].gender;
+                document.getElementById("sign").innerHTML = bitff.sign;
+                document.getElementById("location").innerHTML = bitff.location;
+                document.getElementById("gender").innerHTML = bitff.gender;
+                document.getElementById("interests").innerHTML = bitff.interests;
+                document.getElementById("favorites").innerHTML = bitff.favorites;
+                document.getElementById("steemagent").innerHTML = "<a href='http://steempeak.com/@"+ user +"' target='_blank'>@" + user + "</a>";
+
+
+
+
+
+                // todo : work on metadat
 
                 if (blokify[0].skills !== undefined) {
                     var skills = blokify[0].skills;
@@ -114,9 +192,9 @@ window.onload = function loading() {
 
 
                 //document.getElementById("skills").innerHTML = blokify[0].skills;
-                document.getElementById("biofull").innerHTML = blokify[0].biofull;
+                //document.getElementById("biofull").innerHTML = blokify[0].biofull;
 
-
+             
 
 
                 // start friends section
@@ -142,6 +220,10 @@ window.onload = function loading() {
 
 
         });
+    } else {
+        console.log("IT WORKS!! user not set");
+        document.getElementById("bio").style.display = "none";
+    }
     
     // end steem bits
 

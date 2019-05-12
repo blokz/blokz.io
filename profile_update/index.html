@@ -103,10 +103,10 @@
   
     <h2>Update profile</h2>
 
-<div style="color: red">CURRENTLY DISABLED</div>
+
 
 <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="steemagent">
+    <input class="mdl-textfield__input" type="text" id="steemagent" onchange="steemagentUp()">
     <label class="mdl-textfield__label" for="username">Steem Username</label>
 </div>
 <br />
@@ -118,59 +118,53 @@
 <!-- TODO : Steemconnect code --><hr />
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="name">
-    <label class="mdl-textfield__label" for="realname">Real Name</label>
+    <label class="mdl-textfield__label" for="realname" id="nameLabel">Real Name</label>
 </div><br />
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="usertitle">
-    <label class="mdl-textfield__label" for="usertitle">Job/Self Title</label>
+    <label class="mdl-textfield__label" for="usertitle" id="usertitleLabel">Job/Self Title</label>
 </div><br />
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="birthyear">
-    <label class="mdl-textfield__label" for="birthyear">Birth Year</label>
+    <label class="mdl-textfield__label" for="birthyear" id="birthyearLabel">Birth Year</label>
 </div><br />
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="sign">
-    <label class="mdl-textfield__label" for="sign">Astrology Sign</label>
+    <label class="mdl-textfield__label" for="sign" id="signLabel">Astrology Sign</label>
 </div><br />
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="gender">
-    <label class="mdl-textfield__label" for="gender">Gender</label>
+    <label class="mdl-textfield__label" for="gender" id="genderLabel">Gender</label>
 </div><br />
 
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="interests">
-    <label class="mdl-textfield__label" for="skills">Interests (single word, comma to seperate)</label>
+    <label class="mdl-textfield__label" for="skills" id="interestsLabel">Interests (single word, comma to seperate)</label>
 </div><br />
 
 
 <div class="mdl-textfield mdl-js-textfield">
     <input class="mdl-textfield__input" type="text" id="location">
-    <label class="mdl-textfield__label" for="location">Location</label>
+    <label class="mdl-textfield__label" for="location" id="locationLabel">Location</label>
 </div><br />
 
-Friends:<br />
-
-<input id="Friend1" type="text"><br />
-<input id="Friend2" type="text"><br />
-<input id="Friend3" type="text"><br />
-<input id="Friend4" type="text"><br />
-<input id="Friend5" type="text"><br />
-<input id="Friend6" type="text"><br />
-<input id="Friend7" type="text"><br />
-<input id="Friend8" type="text"><br />
+<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="favorites">
+    <label class="mdl-textfield__label" for="skills" id="favoritesLabel">Friends / Favorite Users (comma to seperate)</label>
+</div><br />
 
 
 <div class="mdl-textfield mdl-js-textfield">
     <textarea class="mdl-textfield__input" type="text" rows= "10" id="article" ></textarea>
-    <label class="mdl-textfield__label" for="article">Bio</label>
+    <label class="mdl-textfield__label" for="article" id="articleLabel">Bio</label>
 </div><br />
 
-<input id="updateprofile" type="button" value="Update Profile" onclick=updateProfile() disabled>
+<input id="updateprofile" type="button" value="Update Profile" onclick=updateProfile()>
 
 
 <script type="text/javascript" src="/js/steem.js?version=0.42final"></script>
