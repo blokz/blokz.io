@@ -153,18 +153,10 @@ if (typeof user !== 'undefined') {
                 document.getElementById("sign").innerHTML = bitff.sign;
                 document.getElementById("location").innerHTML = bitff.location;
                 document.getElementById("gender").innerHTML = bitff.gender;
-                document.getElementById("interests").innerHTML = bitff.interests;
-                document.getElementById("favorites").innerHTML = bitff.favorites;
                 document.getElementById("steemagent").innerHTML = "<a href='http://steempeak.com/@"+ user +"' target='_blank'>@" + user + "</a>";
 
-
-
-
-
-                // todo : work on metadat
-
-                if (blokify[0].skills !== undefined) {
-                    var skills = blokify[0].skills;
+                // interests
+                var skills = bitff.interests;
                     skillsLog = skills.split(',');
                     skillsLog.forEach(function (entry) {
                         console.log(entry);
@@ -177,11 +169,36 @@ if (typeof user !== 'undefined') {
                         a.title = entry;
                         a.target = "_blank";
                         a.href = "https://steempeak.com/created/" + entryy;
-                        document.getElementById("skills").appendChild(a);
+                        document.getElementById("interests").appendChild(a);
+
+                        var br = document.createElement("br");  
+                        document.getElementById("interests").appendChild(br); 
                     });
-                } else {
-                    console.log("no skills")
-                }
+
+
+                // favorites
+                var favs = bitff.favorites;
+                    favsLog = favs.split(',');
+                    favsLog.forEach(function (entry) {
+                        console.log(entry);
+                        entryy = entry.replace(/\s+/g, '');
+                        entryy = entryy.replace(/[^a-zA-Z0-9]/g, '');
+                        entryy = entryy.toLowerCase();
+                        var a = document.createElement('a');
+                        var linkText = document.createTextNode(entry);
+                        a.appendChild(linkText);
+                        a.title = entry;
+                        a.target = "_blank";
+                        a.href = "http://steempeak.com/@" + entryy;
+                        document.getElementById("favorites").appendChild(a);
+
+                        var br = document.createElement("br");  
+                        document.getElementById("favorites").appendChild(br); 
+                    });
+
+
+
+              
                 //var a = document.createElement('a');
                 //var linkText = document.createTextNode(entry);
                 //a.appendChild(linkText);
