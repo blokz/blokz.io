@@ -53,7 +53,7 @@ function updateProfile() {
 
     // build profile data
    
-var data = "A blokz profile, please click <a href='blokz.io/profile/?steem="+ document.getElementById('steemagent').value + "' target='_blank'>blokz.io/profile/?steem="+ document.getElementById('steemagent').value + "</a> to view.";
+var data = "A blokz profile, please click <a href='https://blokz.github.io/profile/?steem="+ document.getElementById('steemagent').value + "' target='_blank'>blokz.io/profile/?steem="+ document.getElementById('steemagent').value + "</a> to view.";
 var article = document.getElementById('article').value;
 var name =  document.getElementById('name').value;
 var usertitle = document.getElementById('usertitle').value;
@@ -76,7 +76,17 @@ console.log("proof: " + article + name + usertitle + birthyear + sign + gender +
         'My Blokz Profile',
         data,
         // json meta
-        { tags: ['blokz'], app: 'blokz', friends: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'], article: article, name: name, usertitle: usertitle, birthyear: birthyear, sign: sign, gender: gender, location: location, interests: interests, favorites: favorites },
+        { tags: ['blokz'],
+         app: 'blokz',
+          article: article,
+           name: name, 
+           usertitle: usertitle,
+           birthyear: birthyear,
+           sign: sign,
+           gender: gender,
+           location: location,
+           interests: interests,
+           favorites: favorites },
         function (err, result) {
             if(err)
                 alert('failure ' + err);
@@ -123,6 +133,17 @@ window.onload = function loading() {
         
 if (typeof user !== 'undefined') {
 
+    steem.api.getAccounts([user], function(err, result) {
+        console.log(err, result); 
+        profdata = JSON.parse(result[0].json_metadata);
+        console.log(profdata);
+        console.log(profdata.profile.cover_image);
+        console.log(profdata.profile.profile_image);
+        var x = document.createElement("IMG");
+        document.getElementById("profimg").src = profdata.profile.profile_image;
+    });
+
+
         steem.api.getDiscussionsByAuthorBeforeDate(user, 'blokzprofile', now, 1, (err, result) => {
 
             
@@ -163,16 +184,24 @@ if (typeof user !== 'undefined') {
                         entryy = entry.replace(/\s+/g, '');
                         entryy = entryy.replace(/[^a-zA-Z0-9]/g, '');
                         entryy = entryy.toLowerCase();
-                        var a = document.createElement('a');
-                        var linkText = document.createTextNode(entry);
-                        a.appendChild(linkText);
-                        a.title = entry;
-                        a.target = "_blank";
-                        a.href = "https://steempeak.com/created/" + entryy;
-                        document.getElementById("interests").appendChild(a);
 
-                        var br = document.createElement("br");  
-                        document.getElementById("interests").appendChild(br); 
+
+
+                                                // NEW
+                                                var vadd = document.createElement('button');
+                                                vadd.className = "mdl-chip";
+                                                vadd.id = entryy;
+                                                vadd.setAttribute("onclick","window.open('https://steempeak.com/created/" + entryy + "','_blank');");
+                                                document.getElementById("interests").appendChild(vadd);
+                                                var sadd = document.createElement('span');
+                                                sadd.className = "mdl-chip__text";
+                                                sadd.id = entryy + "2";
+                                                document.getElementById(entryy).appendChild(sadd);
+                                                
+                                                var t = document.createTextNode(entryy); 
+                                                document.getElementById(entryy + "2").appendChild(t);
+                                                // ENDNEW
+
                     });
 
 
@@ -184,16 +213,21 @@ if (typeof user !== 'undefined') {
                         entryy = entry.replace(/\s+/g, '');
                         entryy = entryy.replace(/[^a-zA-Z0-9]/g, '');
                         entryy = entryy.toLowerCase();
-                        var a = document.createElement('a');
-                        var linkText = document.createTextNode(entry);
-                        a.appendChild(linkText);
-                        a.title = entry;
-                        a.target = "_blank";
-                        a.href = "http://steempeak.com/@" + entryy;
-                        document.getElementById("favorites").appendChild(a);
 
-                        var br = document.createElement("br");  
-                        document.getElementById("favorites").appendChild(br); 
+                        // NEW
+                        var vadd = document.createElement('button');
+                        vadd.className = "mdl-chip";
+                        vadd.id = entryy + "_1";
+                        vadd.setAttribute("onclick","window.open('https://steempeak.com/@" + entryy + "','_blank');");
+                        document.getElementById("favorites").appendChild(vadd);
+                        var sadd = document.createElement('span');
+                        sadd.className = "mdl-chip__text";
+                        sadd.id = entryy + "1";
+                        document.getElementById(entryy + "_1").appendChild(sadd);
+                        
+                        var t = document.createTextNode(entryy); 
+                        document.getElementById(entryy + "1").appendChild(t);
+                        // ENDNEW
                     });
 
 
@@ -239,7 +273,7 @@ if (typeof user !== 'undefined') {
         });
     } else {
         console.log("IT WORKS!! user not set");
-        document.getElementById("bio").style.display = "none";
+        document.getElementById("profilecard").style.display = "none";
     }
     
     // end steem bits
