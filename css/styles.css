@@ -24,9 +24,7 @@
 margin-bottom: 0px
 }
 
-.UserTitle {
- margin-top: 2px;
-}
+
 
 /*************************************
  * TITLE: Sinorca Screen Stylesheet  *
@@ -294,4 +292,8 @@ dd {
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
+}
+
+.label {
+ color: white;
 }
