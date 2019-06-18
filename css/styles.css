@@ -288,6 +288,25 @@ dd {
  background: rgb(100,135,220);
 }
 
+.mdl-card__media {
+  margin: 0;
+
+}
+.mdl-card__media > img {
+	max-width: 100%;
+  background: whitesmoke;
+}
+.mdl-card__actions {
+	display: flex;
+	box-sizing:border-box;
+	align-items: center;
+}
+.mdl-card__actions > .mdl-button--icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+
 .icons {
     font-size: 20px;
     text-decoration: none;
@@ -296,4 +315,8 @@ dd {
 
 .label {
  color: white;
+}
+
+.mdl-grid {
+	max-width: 600px;
 }
