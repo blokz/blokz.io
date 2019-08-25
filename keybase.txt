@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sn0n
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blokz.io
+  * I am sn0n (https://keybase.io/sn0n) on keybase.
+  * I have a public key ASDGMOIbMAEr2bHuMDeDU4ZsWMAd21oBDjGEVLmRTUKf3go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012003f9abe3746eebcf20bdbb04d7eabae3c3e2f38e9c7bdf8f574e73e3f19bd1280a",
+      "host": "keybase.io",
+      "kid": "0120c630e21b30012bd9b1ee30378353866c58c01ddb5a010e318454b9914d429fde0a",
+      "uid": "fffa893245a9cf3d369689bb49987d19",
+      "username": "sn0n"
+    },
+    "merkle_root": {
+      "ctime": 1566732980,
+      "hash": "57054b3b2a2f55ea92f95cdc0cd14a51036ca1782442a7bcd6da2241f4d9b05f45af9c782d7b3fafa0c8b0c7208cc83b4844a2b658c0d2550f5ce0f0f83274dd",
+      "hash_meta": "149cc71b4e2ceddc10345cbd7fa967b348cb3876430fb3488c095e38cec30f7e",
+      "seqno": 6094627
+    },
+    "service": {
+      "entropy": "8Uaoe6OhyL95vD+KHc7NgPQg",
+      "hostname": "blokz.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.0"
+  },
+  "ctime": 1566732990,
+  "expire_in": 504576000,
+  "prev": "56a8d9b3c9d17da31c6a8e4636f4bf6216337c5d3fc298eaf31b315f2546a1cd",
+  "seqno": 82,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxjDiGzABK9mx7jA3g1OGbFjAHdtaAQ4xhFS5kU1Cn94Kp3BheWxvYWTESpcCUsQgVqjZs8nRfaMcao5GNvS/YhYzfF0/wpjq8xsxXyVGoc3EIIGIKz/dpD4esG58DKXD/TkLgZ46JRGC7IC77Q8Ijrj1AgHCo3NpZ8RA/Fd0lYmE6wTrijG8YHNJU//pckmk/1Ozj7Qa8aEg9xwXmOFA/51otM1MblFGsZtlNe9rrJ6QCPf+WbF223ZGBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPE+JARS53Cc5SP/N2oKo6EjAJtlceB/LdyLsVe0HfTSo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sn0n
+
+==================================================================
