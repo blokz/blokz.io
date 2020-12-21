@@ -1,5 +1,5 @@
 # blokz.io
-Blokz is a personal development hub for projects made by @sn0n
+Blokz is a personal development hub for projects made by [sn0n](@sn0n)
 
 currently hosting:
 
