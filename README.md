@@ -1,6 +1,5 @@
 # blokz.io
-Blokz is a personal development hub for projects made by [@sn0n](https://github.com/sn0n)
-
+blokz makes projects merging clientside webapps with the blockchain environment, currently focused on the [hive blockchain](https://hive.io).
 
 # projects
 
@@ -14,3 +13,6 @@ Source:
 
 Source: 
 [blokz/self-help.dev](https://github.com/blokz/self-help.dev)
+
+# 
+Made with ♥️ by [@sn0n](https://github.com/sn0n).
